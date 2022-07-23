@@ -31,7 +31,8 @@ create table educations
     user_id      bigint        references users (id), --not null
     organization varchar(150) not null,
     speciality   varchar(100) not null,
-    year_end     date         not null,
+    year_start   date         not null,
+    year_end     date         ,
     created_at   timestamp default current_timestamp,
     updated_at   timestamp default current_timestamp
 );
@@ -57,9 +58,9 @@ values (1, 'R&k', 'Системный администратор', '2000-01-01',
         'Обновлял и редактировал конфигурацию 1С, делал формы отчетов');
 
 
-insert into educations (user_id, organization, speciality, year_end)
-values (1, 'МГУ', 'информационные технологии', '2002-07-01');
+insert into educations (user_id, organization, speciality, year_start, year_end)
+values (1, 'МГУ', 'информационные технологии', '2002-09-01', '2006-07-01');
 
 
-insert into educations (user_id, organization, speciality, year_end)
-values (1, 'НГУ', 'системная инженерия', '2012-08-01');
+insert into educations (user_id, organization, speciality, year_start, year_end)
+values (1, 'НГУ', 'системная инженерия', '2010-09-01', '2013-07-01');
