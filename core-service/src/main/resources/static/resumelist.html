@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html ng-app="resume">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="resumelist.js"></script>
+</head>
+
+<body>
+
+<div class="container" ng-controller="resumeListController">
+    <h3>Список резюме</h3>
+    <p></p>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>Должность</td>
+            <td>Желаемая зарплата</td>
+            <td></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="r in resumes">
+            <td>{{r.id}}</td>
+            <td>{{r.post}}</td>
+            <td>{{r.salary}}</td>
+            <td>
+                <button class="btn btn-primary" ng-click="viewResume(r.id)">Показать</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>

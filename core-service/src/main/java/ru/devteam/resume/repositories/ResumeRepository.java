@@ -6,4 +6,5 @@ import ru.devteam.resume.entities.Resume;
 
 @Repository
 public interface ResumeRepository extends JpaRepository<Resume, Long> {
+    Resume findByUserId(Long id);
 }
