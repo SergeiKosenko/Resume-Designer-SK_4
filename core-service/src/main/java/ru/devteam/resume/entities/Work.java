@@ -26,10 +26,10 @@ public class Work {
     @Column(name = "post")
     private String post;
 
-    @Column(name = "startwork")
+    @Column(name = "start_work")
     private LocalDate startWork;
 
-    @Column(name = "endwork")
+    @Column(name = "end_work")
     private LocalDate endWork;
 
     @Column(name = "progress")

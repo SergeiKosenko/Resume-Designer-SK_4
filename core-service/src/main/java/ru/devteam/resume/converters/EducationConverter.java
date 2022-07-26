@@ -11,6 +11,7 @@ public class EducationConverter {
 //        createNewEducationDto.setUserId(e.getUserId());
         createNewEducationDto.setOrganization(e.getOrganization());
         createNewEducationDto.setSpeciality(e.getSpeciality());
+        createNewEducationDto.setYearStart(e.getYearStart());
         createNewEducationDto.setYearEnd(e.getYearEnd());
         return createNewEducationDto;
     }

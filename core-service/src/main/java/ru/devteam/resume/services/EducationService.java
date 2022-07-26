@@ -21,6 +21,7 @@ public class EducationService {
 //        education.setUserId(educationDto.getUserId());
         education.setOrganization(educationDto.getOrganization());
         education.setSpeciality(educationDto.getSpeciality());
+        education.setYearStart(educationDto.getYearStart());
         education.setYearEnd(educationDto.getYearEnd());
         educationRepository.save(education);
     }

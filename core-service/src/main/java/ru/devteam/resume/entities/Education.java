@@ -8,6 +8,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "educations")
@@ -29,8 +30,11 @@ public class Education {
     @Column(name = "speciality")
     private String speciality;
 
+    @Column(name = "year_start")
+    private Date yearStart;
+
     @Column(name = "year_end")
-    private LocalDate yearEnd;
+    private Date yearEnd;
 
     @CreationTimestamp
     @Column(name = "created_at")

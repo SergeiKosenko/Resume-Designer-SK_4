@@ -4,7 +4,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.devteam.resume.enums.GenderType;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -14,6 +15,6 @@ public class CreateNewUserDto {
     private String lastName;
     private String password;
     private GenderType gender;
-    private LocalDateTime dateOfBirth;
+    private Date dateOfBirth;
     private String email;
 }

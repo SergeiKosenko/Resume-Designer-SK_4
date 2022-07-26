@@ -8,6 +8,7 @@ import ru.devteam.resume.enums.GenderType;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "users")
@@ -36,24 +37,12 @@ public class User {
     @Enumerated (EnumType.STRING)
     private GenderType gender;
 
-    @Column(name = "dateofbirth")
-    private LocalDateTime dateOfBirth;
+    @Column(name = "date_of_birth")
+    private Date dateOfBirth;
 
     @Column(name = "email")
     private String email;
 
-
-
-//    @OneToMany
-//    @JoinTable(name = "works",
-//            joinColumns = @JoinColumn(name = "user_id"))
-//    private List<Work> works;
-//
-//    @OneToMany
-//    @JoinTable(name = "educations",
-//            joinColumns = @JoinColumn(name = "user_id"))
-//    private List<Education> educations;
-//
     @CreationTimestamp
     @Column(name = "created_at")
     private LocalDateTime createdAt;
