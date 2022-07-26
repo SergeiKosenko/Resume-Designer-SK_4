@@ -59,9 +59,9 @@
                     <div class="contactlist-right-container">
                         <h4 class="head_text_message">ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ</h4>
                         <p class="full__name">Ваш пол</p>
-                        <input  ng-model="newUser.gender" name="gender" id="Male" type="radio" value="M" checked>
+                        <input ng-model="newUser.gender" name="gender" id="Male" type="radio" value="M" checked>
                         <label for="Male">Мужской</label>
-                        <input  ng-model="newUser.gender" name="gender" id="Female" type="radio" value="F">
+                        <input ng-model="newUser.gender" name="gender" id="Female" type="radio" value="F">
                         <label for="Female">Женский</label>
                         <p class="full__name">Дата Рождения</p>
                         <input class="contactlist__message_name_input" type="date" id="newDateOfBirth"
@@ -119,8 +119,19 @@
                         <input class="contactlist__message_name_input" type="text" id="newSalary"
                                ng-model="newResume.salary" placeholder="Зарплата">
                         <p class="full__name">График работы</p>
-                        <input class="contactlist__message_name_input" type="text" id="newSchedule"
-                               ng-model="newResume.schedule" placeholder="График работы">
+
+                        <input ng-model="newResume.schedule" name="schedule" id="Full" type="radio" value="FULL"
+                               checked>
+                        <label for="Full">Полный день</label>
+                        <p></p>
+                        <input ng-model="newUser.schedule" name="schedule" id="Flextable" type="radio" value="FLEXIBLE">
+                        <label for="Flextable">Гибкий график</label>
+                        <p></p>
+                        <input ng-model="newResume.schedule" name="schedule" id="Distant" type="radio" value="DISTANT">
+                        <label for="Distant">Удаленная работа</label>
+                        <p></p>
+                        <input ng-model="newUser.schedule" name="schedule" id="Part" type="radio" value="PART">
+                        <label for="Part">Подработка</label>
                         <p class="full__name">Кратко о себе</p>
                         <input class="contactlist__message_name_input" type="text" id="newAboutMyself"
                                ng-model="newResume.aboutMyself" placeholder="О себе">
