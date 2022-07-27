@@ -25,12 +25,13 @@ public class JwtTokenUtil {
 
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
-        /*
+
         List<String> rolesList = userDetails.getAuthorities().stream()
                 .map(GrantedAuthority::getAuthority)
                 .collect(Collectors.toList());
         claims.put("roles", rolesList);
-        */
+        claims.put("email", rolesList);
+
         Date issuedDate = new Date();
         Date expiredDate = new Date(issuedDate.getTime() + jwtLifetime);
         return Jwts.builder()
@@ -53,10 +54,13 @@ public class JwtTokenUtil {
         return getAllClaimsFromToken(token).getSubject();
     }
 
-    /*
+    public String getEmailFromToken(String token) {
+        return getAllClaimsFromToken(token).getSubject();
+    }
+
     public List<String> getRoles(String token) {
         return getAllClaimsFromToken(token).get("roles", List.class);
     }
-    */
+
 
 }
