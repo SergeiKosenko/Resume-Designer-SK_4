@@ -6,7 +6,7 @@ app.controller('resumev1Controller', function ($scope, $http) {
                 $scope.resume = response.data;
             });
     };
-    $scope.loadResume(1);
+    $scope.loadResume(2);
 });
 
 app.filter('scheduleType', function () {

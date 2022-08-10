@@ -9,6 +9,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class WorkDto {
     private Long id;
+    private Long userId;
     private String organization;
     private String post;
     private LocalDate startWork;
