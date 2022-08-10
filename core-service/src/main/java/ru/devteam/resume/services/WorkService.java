@@ -13,7 +13,7 @@ import java.util.List;
 public class WorkService {
     private final WorkRepository workRepository;
 
-    public List<Work> findAll(){
+    public List<Work> findAll() {
         return workRepository.findAll();
     }
 
@@ -28,5 +28,17 @@ public class WorkService {
 //        work.setCreatedAt(workDto.getCreatedAt());
 //        work.setUpdatedAt(workDto.getUpdatedAt());
         workRepository.save(work);
+    }
+
+    public void update(Work work) {
+        workRepository.save(work);
+    }
+
+    public void add(Work work) {
+        workRepository.save(work);
+    }
+
+    public List<Work> findAllWorksByUseId(Long userId) {
+        return workRepository.findByUserId(userId);
     }
 }
